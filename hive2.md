@@ -269,7 +269,8 @@ order by oi.order_item_order_id;
 --Most popular product categories
 --Also try this with impala, it will get rejected if the table stats are missing.
 /*
-Rejected query from pool root.default: request memory needed 4.35 GB per node is greater than memory available for admission 4.00 GB of ip-172-31-89-11.ec2.internal:22000. Use the MEM_LIMIT query option to indicate how much memory is required per node.
+Rejected query from pool root.default: 
+request memory needed 4.35 GB per node is greater than memory available for admission 4.00 GB of ip-172-31-89-11.ec2.internal:22000. Use the MEM_LIMIT query option to indicate how much memory is required per node.
 */
 
 select c.category_name, count(order_item_quantity) as count
