@@ -1,5 +1,5 @@
 <!-- Headings -->
-# Data Engineering: week 3Homework Assignment (Hive-2)
+# Data Engineering: week 3 Homework Assignment (Hive-2)
 ## 1.Banklist dataset
 ### (1)Write queries on banklist table:
 - Findtop 5states with most banks. The result must show the state name and number of banks in descending order.
