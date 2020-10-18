@@ -175,10 +175,15 @@ Method 1: Spark DataFrame API
 Method 2: Spark SQL
 
 ```
-spark.sql("select t1.NAME, t2.SAL from employee_table t1 INNER JOIN employee_table t2 on t1.MGR==t2.EMPNO where t1.SAL>t2SAL").show()
+spark.sql("select t1.NAME, t1.SAL from employee_table t1 INNER JOIN employee_table t2 on t1.MGR==t2.EMPNO where t1.SAL>t2.SAL").show()
++----+----+
+|NAME| SAL|
++----+----+
+|FORD|3000|
++----+----+
 ```
 
-##### 6.list employee's name and salary whose salary is higher than average salary of whole company
+### 6.list employee's name and salary whose salary is higher than average salary of whole company
 
 Method 1: Spark DataFrame API
 
@@ -280,7 +285,7 @@ df.withColumn("total_income",col("SAL")+col("COMM")).sort(desc("total_income")).
 Method 2: Spark SQL
 
 ```{scala}
-spark.sql("select NAME, SAL+COMM as total_income from employee_table order by total_income DESC").show(false)
+spark.sql("select NAME, SAL+COMM as total_income from employee_table order by total_income DESC").show()
 +------+------------+
 |NAME  |total_income|
 +------+------------+
