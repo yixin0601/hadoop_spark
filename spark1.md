@@ -279,7 +279,7 @@ df.withColumn("total_income",col("SAL")+col("COMM")).sort(desc("total_income")).
 
 Method 2: Spark SQL
 
-```
+```{scala}
 spark.sql("select NAME, SAL+COMM as total_income from employee_table order by total_income DESC").show(false)
 +------+------------+
 |NAME  |total_income|
